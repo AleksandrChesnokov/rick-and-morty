@@ -59,7 +59,6 @@ export function Popup() {
     };
   }, [popupSettings.visible, setPopupSettings]);
 
-  console.log(popupSettings);
   return (
     <PopupContainer
       onClick={togPopup}

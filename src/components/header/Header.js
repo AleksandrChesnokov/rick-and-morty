@@ -30,12 +30,13 @@ export function Header() {
     }
 
     const fullUrl = `${API_URL}?${params.toString()}`;
-    setApiURL(fullUrl);
+    // setApiURL(fullUrl);
     window.history.replaceState(
       null,
       '',
-      params.toString() ? `?${params.toString()}` : params.toString()
+      params.size ? `?${params.toString()}` : '/'
     );
+    setApiURL(fullUrl);
   }
 
   useEffect(() => {
